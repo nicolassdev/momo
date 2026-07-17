@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Momo Live Top Up</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/webp" href="images/momo-icon.webp">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+z-index:999;
+}
+
+nav{
+width:90%;
+margin:auto;
+height:75px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#ff3b7f;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff3b7f;
+}
+
+.btn{
+background:#ff3b7f;
+color:white;
+padding:12px 24px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e92f6d;
+transform:translateY(-3px);
+}
+
+.hero{
+padding-top:120px;
+width:90%;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:100vh;
+gap:40px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-text span{
+color:#ff3b7f;
+}
+
+.hero-text p{
+font-size:18px;
+color:#666;
+margin-bottom:35px;
+}
+
+
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+
+.phone{
+width:330px;
+background:white;
+padding:20px;
+border-radius:35px;
+box-shadow:0 30px 80px rgba(0,0,0,.12);
+}
+
+.phone img{
+width:100%;
+border-radius:25px;
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.35s;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card h2{
+font-size:22px;
+margin:15px 0;
+}
+
+.price{
+font-size:35px;
+font-weight:bold;
+color:#ff3b7f;
+}
+
+.buy{
+margin-top:20px;
+display:inline-block;
+padding:12px 30px;
+background:#ff3b7f;
+color:white;
+text-decoration:none;
+border-radius:50px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:35px;
+border-radius:20px;
+}
+
+.feature i{
+font-size:40px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.step{
+background:#fff;
+padding:30px;
+border-radius:18px;
+text-align:center;
+}
+
+.number{
+width:55px;
+height:55px;
+background:#ff3b7f;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+border-radius:50%;
+font-size:22px;
+margin-bottom:20px;
+}
+
+.faq-item{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:15px;
+cursor:pointer;
+}
+
+.answer{
+display:none;
+margin-top:15px;
+color:#666;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:900px){
+
+header{
+padding:10px 0;
+}
+
+nav{
+width:95%;
+flex-direction:column;
+height:auto;
+gap:15px;
+padding:10px 0;
+}
+
+.logo{
+font-size:24px;
+}
+
+nav ul{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero{
+
+padding-top:180px;
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-text{
+
+width:100%;
+
+}
+
+.hero-text h1{
+
+font-size:38px;
+
+}
+
+.hero-text p{
+
+font-size:16px;
+
+}
+
+.hero-image{
+
+width:100%;
+
+}
+
+.phone{
+
+width:90%;
+
+max-width:320px;
+
+margin:auto;
+
+}
+
+.hero .btn{
+
+display:block;
+
+width:100%;
+
+margin:15px auto;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+.steps{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+MOMO LIVE
+</div>
+
+<ul>
+<li><a href="#download">About Us</a></li>
+
+<li><a href="#live">Live Streamers</a></li>
+
+<li><a href="#agency">Agencies</a></li>
+
+<li><a href="#benefits">Benefits</a></li>
+
+
+</ul>
+
+<a href="https://apkpure.net/momo-live-live-stream-chat/com.huixin.momo" target="_blank" class="btn">
+Download Now
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Go Live.
+<br>
+
+<span>Connect.</span>
+
+<br>
+
+Earn Every Day.
+
+</h1>
+
+<p>
+
+Join thousands of creators on Momo Live.
+Meet new friends, build your audience,
+and become part of a growing community.
+
+</p>
+
+<a href="#" class="btn">
+Start Streaming
+</a>
+
+<a href="agency.html" class="btn" style="margin-left:10px;background:#8b5cf6;">
+Join an Agency
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="phone">
+
+<img src="images/momo1.png?w=500" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="packages">
+
+<h2 class="section-title">
+Top Up Packages
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h2>100 Coins</h2>
+<div class="price">$1.99</div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="card">
+<h2>500 Coins</h2>
+<div class="price">$8.99</div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="card">
+<h2>1000 Coins</h2>
+<div class="price">$15.99</div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="card">
+<h2>5000 Coins</h2>
+<div class="price">$69.99</div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h2 class="section-title">
+Why Choose Us
+</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>⚡ Instant Delivery</h3>
+
+<p>
+Receive your Momo Live coins within minutes.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🔒 Secure Payment</h3>
+
+<p>
+Protected transactions with trusted payment gateways.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>💳 Multiple Payment</h3>
+
+<p>
+GCash, Maya, Bank Transfer, Credit Card.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🕒 24/7 Support</h3>
+
+<p>
+Friendly customer service anytime.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="guide">
+
+<h2 class="section-title">
+How It Works
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Select Package</h3>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Enter Momo ID</h3>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Complete Payment</h3>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>Receive Coins</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<div class="faq-item">
+
+<h3>
+How long does delivery take?
+</h3>
+
+<div class="answer">
+
+Usually within 1-5 minutes.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Is it safe?
+</h3>
+
+<div class="answer">
+
+Yes. We use secure payment processing.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Do I need my password?
+</h3>
+
+<div class="answer">
+
+No. Only your Momo Live ID is required.
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 MOMO LIVE
+
+</footer>
+
+<script>
+
+document.querySelectorAll(".faq-item").forEach(item=>{
+
+item.addEventListener("click",()=>{
+
+const answer=item.querySelector(".answer");
+
+answer.style.display=
+answer.style.display==="block"
+?"none"
+:"block";
+
+});
+
+});
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{opacity:0,transform:'translateY(40px)'},
+
+{opacity:1,transform:'translateY(0px)'}
+
+],{
+
+duration:700,
+fill:'forwards'
+
+});
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card,.feature,.step").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
