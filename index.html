@@ -4,354 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Momo Live Top Up</title>
+<title>Momo Live</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/webp" href="images/momo-icon.webp">
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f5f7fb;
-color:#222;
-}
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-z-index:999;
-}
-
-nav{
-width:90%;
-margin:auto;
-height:75px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:28px;
-font-weight:700;
-color:#ff3b7f;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#ff3b7f;
-}
-
-.btn{
-background:#ff3b7f;
-color:white;
-padding:12px 24px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-background:#e92f6d;
-transform:translateY(-3px);
-}
-
-.hero{
-padding-top:120px;
-width:90%;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-min-height:100vh;
-gap:40px;
-}
-
-.hero-text{
-flex:1;
-}
-
-.hero-text h1{
-font-size:55px;
-line-height:1.2;
-margin-bottom:20px;
-}
-
-.hero-text span{
-color:#ff3b7f;
-}
-
-.hero-text p{
-font-size:18px;
-color:#666;
-margin-bottom:35px;
-}
-
-
-
-.hero-image{
-flex:1;
-display:flex;
-justify-content:center;
-}
-
-
-.phone{
-width:330px;
-background:white;
-padding:20px;
-border-radius:35px;
-box-shadow:0 30px 80px rgba(0,0,0,.12);
-}
-
-.phone img{
-width:100%;
-border-radius:25px;
-}
-
-section{
-padding:90px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:60px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-transition:.35s;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,.12);
-}
-
-.card h2{
-font-size:22px;
-margin:15px 0;
-}
-
-.price{
-font-size:35px;
-font-weight:bold;
-color:#ff3b7f;
-}
-
-.buy{
-margin-top:20px;
-display:inline-block;
-padding:12px 30px;
-background:#ff3b7f;
-color:white;
-text-decoration:none;
-border-radius:50px;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.feature{
-background:white;
-padding:35px;
-border-radius:20px;
-}
-
-.feature i{
-font-size:40px;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.step{
-background:#fff;
-padding:30px;
-border-radius:18px;
-text-align:center;
-}
-
-.number{
-width:55px;
-height:55px;
-background:#ff3b7f;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-border-radius:50%;
-font-size:22px;
-margin-bottom:20px;
-}
-
-.faq-item{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:15px;
-cursor:pointer;
-}
-
-.answer{
-display:none;
-margin-top:15px;
-color:#666;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-@media(max-width:900px){
-
-header{
-padding:10px 0;
-}
-
-nav{
-width:95%;
-flex-direction:column;
-height:auto;
-gap:15px;
-padding:10px 0;
-}
-
-.logo{
-font-size:24px;
-}
-
-nav ul{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.hero{
-
-padding-top:180px;
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-}
-
-.hero-text{
-
-width:100%;
-
-}
-
-.hero-text h1{
-
-font-size:38px;
-
-}
-
-.hero-text p{
-
-font-size:16px;
-
-}
-
-.hero-image{
-
-width:100%;
-
-}
-
-.phone{
-
-width:90%;
-
-max-width:320px;
-
-margin:auto;
-
-}
-
-.hero .btn{
-
-display:block;
-
-width:100%;
-
-margin:15px auto;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.features{
-
-grid-template-columns:1fr;
-
-}
-
-.steps{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -362,19 +19,18 @@ grid-template-columns:1fr;
 <nav>
 
 <div class="logo">
-MOMO LIVE
+    MOMO LIVE
 </div>
 
 <ul>
-<li><a href="#download">About Us</a></li>
+    <li><a href="#about">About Us</a></li>
 
-<li><a href="#live">Live Streamers</a></li>
-
-<li><a href="#agency">Agencies</a></li>
-
-<li><a href="#benefits">Benefits</a></li>
+    <li><a href="#community">Community</a></li>
 
 
+    <li><a href="#benefits">Benefits</a></li>
+
+    <li><a href="#faq">FAQ</a></li>
 </ul>
 
 <a href="https://apkpure.net/momo-live-live-stream-chat/com.huixin.momo" target="_blank" class="btn">
@@ -410,7 +66,7 @@ and become part of a growing community.
 
 </p>
 
-<a href="#" class="btn">
+<a href="#guide" class="btn">
 Start Streaming
 </a>
 
@@ -432,86 +88,179 @@ Join an Agency
 
 </section>
 
-<section id="packages">
+<section id="community">
 
 <h2 class="section-title">
-Top Up Packages
+Our Creator Community
 </h2>
+
+<p style="text-align:center;color:#666;margin-top:-40px;margin-bottom:50px;max-width:700px;margin-left:auto;margin-right:auto;">
+
+Meet some of our talented creators who entertain thousands of viewers every day through music, gaming, dancing, lifestyle content, and live interaction.
+
+</p>
 
 <div class="cards">
 
 <div class="card">
-<h2>100 Coins</h2>
-<div class="price">$1.99</div>
-<a href="#" class="buy">Buy Now</a>
+
+<img src="images/momo1.png" style="width:100%;height:260px;object-fit:cover;border-radius:18px;">
+
+<h2>Angela Park</h2>
+
+<p>🎤 Singing Creator</p>
+
+<p>❤️ 120K Followers</p>
+
+<p>🔴 Live Daily</p>
+
+<a href="#" class="buy">
+
+View Profile
+
+</a>
+
 </div>
 
 <div class="card">
-<h2>500 Coins</h2>
-<div class="price">$8.99</div>
-<a href="#" class="buy">Buy Now</a>
+
+<img src="images/momo1.png" style="width:100%;height:260px;object-fit:cover;border-radius:18px;">
+
+<h2>Ken Dela Cruz</h2>
+
+<p>🎮 Gaming Streamer</p>
+
+<p>❤️ 95K Followers</p>
+
+<p>🔴 Live Every Night</p>
+
+<a href="#" class="buy">
+
+View Profile
+
+</a>
+
 </div>
 
 <div class="card">
-<h2>1000 Coins</h2>
-<div class="price">$15.99</div>
-<a href="#" class="buy">Buy Now</a>
+
+<img src="images/momo1.png" style="width:100%;height:260px;object-fit:cover;border-radius:18px;">
+
+<h2>Sophia Lim</h2>
+
+<p>💃 Dance Creator</p>
+
+<p>❤️ 180K Followers</p>
+
+<p>🔴 Trending Creator</p>
+
+<a href="#" class="buy">
+
+View Profile
+
+</a>
+
 </div>
 
 <div class="card">
-<h2>5000 Coins</h2>
-<div class="price">$69.99</div>
-<a href="#" class="buy">Buy Now</a>
+
+<img src="images/momo1.png" style="width:100%;height:260px;object-fit:cover;border-radius:18px;">
+
+<h2>James Lee</h2>
+
+<p>🎧 Music & Lifestyle</p>
+
+<p>❤️ 210K Followers</p>
+
+<p>🔴 Top Creator</p>
+
+<a href="#" class="buy">
+
+View Profile
+
+</a>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="features">
+<section id="about">
 
 <h2 class="section-title">
-Why Choose Us
+
+About Our Agency
+
 </h2>
+
+<p style="text-align:center;
+max-width:900px;
+margin:0 auto 60px;
+font-size:18px;
+color:#666;
+line-height:1.8;">
+
+We are a passionate Momo Live agency dedicated to helping talented creators grow their audience, increase their earnings, and build meaningful communities.
+
+Whether you're just starting your live-streaming journey or already have an established fan base, our experienced team is here to support you every step of the way.
+
+</p>
 
 <div class="features">
 
 <div class="feature">
 
-<h3>⚡ Instant Delivery</h3>
+<h1>🌎</h1>
+
+<h3>Global Community</h3>
 
 <p>
-Receive your Momo Live coins within minutes.
+
+Meet viewers and creators from different countries and build friendships through live streaming.
+
 </p>
 
 </div>
 
 <div class="feature">
 
-<h3>🔒 Secure Payment</h3>
+<h1>💰</h1>
+
+<h3>Creator Income</h3>
 
 <p>
-Protected transactions with trusted payment gateways.
+
+Receive virtual gifts, monthly bonuses, and agency rewards while doing what you love.
+
 </p>
 
 </div>
 
 <div class="feature">
 
-<h3>💳 Multiple Payment</h3>
+<h1>🎯</h1>
+
+<h3>Professional Support</h3>
 
 <p>
-GCash, Maya, Bank Transfer, Credit Card.
+
+Our agency provides training, event opportunities, and dedicated management to help you grow faster.
+
 </p>
 
 </div>
 
 <div class="feature">
 
-<h3>🕒 24/7 Support</h3>
+<h1>🚀</h1>
+
+<h3>Career Growth</h3>
 
 <p>
-Friendly customer service anytime.
+
+Turn your passion into a rewarding career by becoming part of one of the fastest-growing live streaming communities.
+
 </p>
 
 </div>
@@ -522,95 +271,214 @@ Friendly customer service anytime.
 
 <section id="guide">
 
-<h2 class="section-title">
-How It Works
-</h2>
+    <h2 class="section-title">
+        How to Join Our Agency
+    </h2>
 
-<div class="steps">
+    <p style="
+        text-align:center;
+        max-width:700px;
+        margin:-35px auto 50px;
+        color:#666;
+        line-height:1.8;
+    ">
+        Joining our agency is simple. Follow these four easy steps and start your
+        journey as a Momo Live creator.
+    </p>
 
-<div class="step">
+    <div class="steps">
 
-<div class="number">1</div>
+        <div class="step">
 
-<h3>Select Package</h3>
+            <div class="number">1</div>
 
-</div>
+            <h3>Download Momo Live</h3>
 
-<div class="step">
+            <p>
+                Install the Momo Live app and create your account using your preferred login method.
+            </p>
 
-<div class="number">2</div>
+        </div>
 
-<h3>Enter Momo ID</h3>
+        <div class="step">
 
-</div>
+            <div class="number">2</div>
 
-<div class="step">
+            <h3>Apply to Our Agency</h3>
 
-<div class="number">3</div>
+            <p>
+                Click the <strong>Join an Agency</strong> button and submit your application with your Momo ID.
+            </p>
 
-<h3>Complete Payment</h3>
+        </div>
 
-</div>
+        <div class="step">
 
-<div class="step">
+            <div class="number">3</div>
 
-<div class="number">4</div>
+            <h3>Get Approved</h3>
 
-<h3>Receive Coins</h3>
+            <p>
+                Our agency team will review your application and contact you once you're accepted.
+            </p>
 
-</div>
+        </div>
 
-</div>
+        <div class="step">
+
+            <div class="number">4</div>
+
+            <h3>Start Streaming</h3>
+
+            <p>
+                Go live, grow your audience, receive gifts from viewers, and build your creator career.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="benefits">
+
+    <h2 class="section-title">
+        Why Join Our Agency?
+    </h2>
+
+    <p class="benefit-subtitle">
+        We help creators build their audience, earn rewards, and become successful streamers through continuous support and exciting opportunities.
+    </p>
+
+    <div class="benefit-grid">
+
+        <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>Earn Extra Income</h3>
+            <p>
+                Receive virtual gifts from viewers and unlock agency incentives as your community grows.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🎓</div>
+            <h3>Free Creator Training</h3>
+            <p>
+                Learn streaming tips, audience engagement, and content strategies from experienced mentors.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3>Grow Your Audience</h3>
+            <p>
+                We help promote your live streams and support your journey toward becoming a popular creator.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Dedicated Agency Support</h3>
+            <p>
+                Our management team is always ready to assist you with technical questions and creator guidance.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🎉</div>
+            <h3>Exclusive Events</h3>
+            <p>
+                Participate in agency competitions, campaigns, and special live-stream events throughout the year.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🌍</div>
+            <h3>Global Community</h3>
+            <p>
+                Connect with creators and viewers from different countries while building lasting friendships.
+            </p>
+        </div>
+
+    </div>
 
 </section>
 
 <section id="faq">
 
-<h2 class="section-title">
-Frequently Asked Questions
-</h2>
+    <h2 class="section-title">
+        Frequently Asked Questions
+    </h2>
 
-<div class="faq-item">
+    <p style="
+        text-align:center;
+        max-width:700px;
+        margin:-35px auto 50px;
+        color:#666;
+        line-height:1.8;
+    ">
+        Have questions about joining our Momo Live agency? Here are some of the most common questions from aspiring creators.
+    </p>
 
-<h3>
-How long does delivery take?
-</h3>
+    <div class="faq-item">
 
-<div class="answer">
+        <h3>🎤 Who can join your Momo Live agency?</h3>
 
-Usually within 1-5 minutes.
+        <div class="answer">
+            Anyone who is passionate about live streaming, entertainment, gaming, singing, dancing, or connecting with people can apply. New creators are welcome.
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="faq-item">
 
-<div class="faq-item">
+        <h3>📱 Do I need streaming experience?</h3>
 
-<h3>
-Is it safe?
-</h3>
+        <div class="answer">
+            No. Whether you're a beginner or an experienced creator, our agency provides guidance and support to help you grow.
+        </div>
 
-<div class="answer">
+    </div>
 
-Yes. We use secure payment processing.
+    <div class="faq-item">
 
-</div>
+        <h3>💰 How do streamers earn money?</h3>
 
-</div>
+        <div class="answer">
+            Streamers can earn through virtual gifts from viewers, agency incentives, official platform events, and other available creator programs.
+        </div>
 
-<div class="faq-item">
+    </div>
 
-<h3>
-Do I need my password?
-</h3>
+    <div class="faq-item">
 
-<div class="answer">
+        <h3>🆔 What do I need to apply?</h3>
 
-No. Only your Momo Live ID is required.
+        <div class="answer">
+            You only need your Momo Live account and Momo ID. After submitting your application, our agency team will review it and contact you.
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="faq-item">
+
+        <h3>⏳ How long does the application process take?</h3>
+
+        <div class="answer">
+            Most applications are reviewed within 24 to 48 hours. Our team will notify you once your application has been approved.
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>🤝 Why should I join your agency?</h3>
+
+        <div class="answer">
+            We provide creator guidance, community support, promotional opportunities, training, and help you grow your audience while enjoying your streaming journey.
+        </div>
+
+    </div>
 
 </section>
 
@@ -663,6 +531,9 @@ fill:'forwards'
 });
 
 document.querySelectorAll(".card,.feature,.step").forEach(el=>observer.observe(el));
+
+
+
 
 </script>
 
