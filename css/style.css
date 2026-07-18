@@ -70,6 +70,77 @@ background:#e92f6d;
 transform:translateY(-3px);
 }
 
+
+
+.menu-toggle{
+
+display:none;
+
+width:35px;
+
+cursor:pointer;
+
+z-index:1001;
+
+}
+
+.menu-toggle span{
+
+display:block;
+
+height:3px;
+
+background:#ff3b7f;
+
+margin:7px 0;
+
+border-radius:10px;
+
+transition:.35s;
+
+}
+
+.mobile-download{
+
+display:none;
+
+}
+ 
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+transition:.35s;
+
+z-index:998;
+
+}
+
+.overlay.active{
+
+opacity:1;
+visibility:visible;
+pointer-events:auto;
+
+}
+
+
+
 .hero{
 padding-top:120px;
 width:90%;
@@ -429,19 +500,28 @@ padding:10px 0;
 }
 
 nav{
+
 width:95%;
-flex-direction:column;
-height:auto;
-gap:15px;
-padding:10px 0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+height:70px;
+
 }
 
-.logo .a{
+
+
+.logo{
 font-size:24px;
 }
 
 nav ul{
 display:flex;
+position:fixed;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
@@ -518,6 +598,107 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 
 }
+
+.desktop-btn{
+
+display:none;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+ 
+nav ul{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:280px;
+
+height:100vh;
+
+background:white;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:30px;
+
+transition:.35s;
+
+box-shadow:-10px 0 40px rgba(0,0,0,.15);
+
+z-index:999;
+
+}
+
+nav ul.active{
+
+right:0;
+
+}
+
+.mobile-download{
+
+display:inline-block;
+
+background:#ff3b7f;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+color:white;
+
+}
+
+.mobile-download:hover{
+   color:white;
+   background:#8b5cf6;
+}
+
+nav ul li{
+
+list-style:none;
+
+}
+
+nav ul a{
+
+font-size:18px;
+
+}
+
+.menu-toggle.active span:nth-child(1){
+
+transform:translateY(10px) rotate(45deg);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+transform:translateY(-10px) rotate(-45deg);
+
+}
+
 
 }
 

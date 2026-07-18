@@ -18,28 +18,55 @@
 
 <nav>
 
-<div class="logo">
-    MOMO LIVE
-</div>
+    <div class="logo">
+        MOMO LIVE
+    </div>
 
-<ul>
-    <li><a href="#about">About Us</a></li>
+    <div class="menu-toggle" id="menu-toggle">
 
-    <li><a href="#community">Community</a></li>
+        <span></span>
+        <span></span>
+        <span></span>
 
+    </div>
 
-    <li><a href="#benefits">Benefits</a></li>
+    <ul id="nav-links">
 
-    <li><a href="#faq">FAQ</a></li>
-</ul>
+        <li><a href="#about">About Us</a></li>
 
-<a href="https://apkpure.net/momo-live-live-stream-chat/com.huixin.momo" target="_blank" class="btn">
-Download Now
-</a>
+        <li><a href="#community">Community</a></li>
+
+        <li><a href="#benefits">Benefits</a></li>
+
+        <li><a href="#faq">FAQ</a></li>
+
+        <li>
+
+            <a href="https://apkpure.net/momo-live-live-stream-chat/com.huixin.momo"
+               target="_blank"
+               class="mobile-download">
+
+               Download App
+
+            </a>
+
+        </li>
+
+    </ul>
+
+    <a href="https://apkpure.net/momo-live-live-stream-chat/com.huixin.momo"
+       target="_blank"
+       class="btn desktop-btn">
+
+        Download Now
+
+    </a>
 
 </nav>
 
 </header>
+
+<div class="overlay" id="overlay"></div>
 
 <section class="hero">
 
@@ -488,54 +515,7 @@ Turn your passion into a rewarding career by becoming part of one of the fastest
 
 </footer>
 
-<script>
-
-document.querySelectorAll(".faq-item").forEach(item=>{
-
-item.addEventListener("click",()=>{
-
-const answer=item.querySelector(".answer");
-
-answer.style.display=
-answer.style.display==="block"
-?"none"
-:"block";
-
-});
-
-});
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.animate([
-
-{opacity:0,transform:'translateY(40px)'},
-
-{opacity:1,transform:'translateY(0px)'}
-
-],{
-
-duration:700,
-fill:'forwards'
-
-});
-
-}
-
-});
-
-});
-
-document.querySelectorAll(".card,.feature,.step").forEach(el=>observer.observe(el));
-
-
-
-
-</script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
