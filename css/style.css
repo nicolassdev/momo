@@ -105,7 +105,13 @@ transition:.35s;
 display:none;
 
 }
+
  
+ 
+.btn:hover{
+   color:white;
+   background:#8b5cf6;
+}
 
 .overlay{
 
