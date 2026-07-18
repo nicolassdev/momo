@@ -588,6 +588,9 @@ max-width:320px;
 margin:auto;
 
 }
+.btn{
+    margin-left: 0px !important;
+}
 
 .hero .btn{
 
