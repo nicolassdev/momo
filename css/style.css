@@ -21,6 +21,7 @@ width:100%;
 background:white;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
 z-index:999;
+padding-top:env(safe-area-inset-top);
 }
 
 nav{
@@ -69,7 +70,15 @@ transition:.3s;
 background:#e92f6d;
 transform:translateY(-3px);
 }
+.nav-actions{
 
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+}
 
 
 .menu-toggle{
@@ -109,7 +118,7 @@ display:none;
  
  
 .btn:hover{
-   color:white;
+   color:white !important;
    background:#8b5cf6;
 }
 
@@ -519,10 +528,13 @@ height:70px;
 
 }
 
+.desktop-btn{
+    display:none;
+}
 
 
 .logo{
-font-size:24px;
+font-size:18px;
 }
 
 nav ul{
@@ -671,7 +683,7 @@ color:white;
 }
 
 .mobile-download:hover{
-   color:white;
+   color:white !important;
    background:#8b5cf6;
 }
 
@@ -705,7 +717,207 @@ transform:translateY(-10px) rotate(-45deg);
 
 }
 
+.theme-btn{
+
+    width:42px;
+    height:42px;
+    font-size:18px;
+    margin-right:8px;
 
 }
 
 
+}
+
+
+
+
+/* night mode  */
+
+/* ==========================
+   THEME BUTTON
+========================== */
+
+.theme-btn{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:#f1f1f1;
+
+cursor:pointer;
+
+font-size:20px;
+
+transition:.3s;
+
+margin-right:15px;
+
+}
+
+.theme-btn:hover{
+
+transform:rotate(25deg);
+
+background:#ff4fa2;
+
+color:white;
+
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+body.dark{
+
+background:#121212;
+
+color:#ffffff;
+
+}
+
+/* Header */
+
+body.dark header{
+
+background:#1a1a1a;
+
+box-shadow:0 5px 20px rgba(0,0,0,.5);
+
+}
+
+/* Navigation */
+
+body.dark nav a{
+
+color:#f3f3f3;
+
+}
+
+body.dark nav a:hover{
+
+color:#ff4fa2;
+
+}
+
+/* Cards */
+
+body.dark .card,
+
+body.dark .feature,
+
+body.dark .step,
+
+body.dark .benefit-card,
+
+body.dark .faq-item,
+
+body.dark .member,
+
+body.dark .join,
+
+body.dark .stat,
+
+body.dark .phone{
+
+background:#1d1d1d;
+
+color:white;
+
+box-shadow:none;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Paragraphs */
+
+body.dark p,
+
+body.dark .answer{
+
+color:#cfcfcf;
+
+}
+
+/* Titles */
+
+body.dark h1,
+
+body.dark h2,
+
+body.dark h3{
+
+color:white;
+
+}
+
+/* Inputs (future use) */
+
+body.dark input,
+
+body.dark textarea,
+
+body.dark select{
+
+background:#2a2a2a;
+
+color:white;
+
+border:1px solid #444;
+
+}
+
+/* Footer */
+
+body.dark footer{
+
+background:#0c0c0c;
+
+}
+
+/* Hero */
+
+body.dark .hero{
+
+background:#121212;
+
+}
+
+/* Benefits */
+
+body.dark #benefits{
+
+background:#181818;
+
+}
+
+/* FAQ */
+
+body.dark .faq-item{
+
+border:1px solid #2b2b2b;
+
+}
+
+/* Mobile Drawer */
+
+body.dark nav ul{
+
+background:#1d1d1d;
+
+}
+
+body.dark .theme-btn{
+
+background:#2a2a2a;
+
+color:white;
+
+}

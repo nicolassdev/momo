@@ -83,6 +83,37 @@ document.addEventListener("keydown", (e) => {
 });
 
 
+// night moode 
+
+
+const themeBtn = document.getElementById("theme-toggle");
+
+function applyTheme() {
+
+    const isDark = document.body.classList.contains("dark");
+
+    themeBtn.innerHTML = isDark ? "☀️" : "🌙";
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+}
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    applyTheme();
+
+});
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
+
+applyTheme();
+
+
 
 
 

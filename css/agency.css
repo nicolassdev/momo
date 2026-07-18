@@ -501,3 +501,29 @@ font-size:24px;
 }
 
 }
+
+/* dark mood */
+body.dark{
+    background:#121212;
+    color:#fff;
+}
+
+body.dark header{
+    background:linear-gradient(135deg,#1d1d1d,#2a2a2a);
+}
+
+body.dark .stat,
+body.dark .member,
+body.dark .join{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #333;
+}
+
+body.dark p{
+    color:#d0d0d0;
+}
+
+body.dark footer{
+    background:#090909;
+}
